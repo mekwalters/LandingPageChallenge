@@ -1,0 +1,92 @@
+html {
+  font-size: 16px;
+}
+
+body{
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: auto;
+  padding-top: 1rem;
+}
+
+header {
+  background-color:rgb(64, 135, 228);
+  border: 3px solid yellow;
+  max-height: 200px;
+}
+
+header .container {
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  margin-top: 0;
+  /*need background image */
+  width: 100%;
+}
+
+
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+   
+  }
+
+.container li {
+  list-style-type: none;
+  padding: 1rem
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  background-color:gray;
+}
+
+/* For small-screen mobile phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    padding-top: 0;
+  }
+  .logo {
+    display:hidden;
+  }
+  .container li {
+    margin: 0 0.3;
+  }
+
+}
+
+/* For medium-screen mobile phones */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Styles for medium-screen mobile phones */
+}
+
+/* For large-screen mobile phones */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for large-screen mobile phones */
+}
+/* For small tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for small tablets */
+}
+
+/* For medium tablets */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  /* Styles for medium tablets */
+}
+
+/* For large tablets */
+@media (min-width: 1200px) {
+  /* Styles for large tablets */
+}
