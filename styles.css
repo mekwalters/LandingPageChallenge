@@ -13,6 +13,14 @@ h1 {
   margin: auto;
   padding-top: 1rem;
 }
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display:block;
+  max-width: 100%;
+}
 
 header {
   background-color:rgb(64, 135, 228);
@@ -41,6 +49,34 @@ header .container {
 .container li {
   list-style-type: none;
   padding: 1rem
+}
+
+.main-container { 
+  display: flex;
+  columns: 2;
+  column-width: 3% 80%;
+  column-gap: 0.5%;
+  justify-content: space-around;
+  background-color: rgba(206, 202, 202, 0.685);
+}
+
+.main-container aside {
+  font-size: 0.75rem;
+  border: .3rem solid black;
+  border-bottom: none;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color:rgb(64, 135, 228);
+}
+
+.services-container .image-container {
+  width: 90%;
+  height: 65%;
+  margin: 0 auto;
 }
 
 .footer {
