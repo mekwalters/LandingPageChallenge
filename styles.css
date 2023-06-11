@@ -19,8 +19,8 @@ h1 {
 
 .image-container img {
   display:block;
-  max-width: 100%;
-}
+  max-width: 100%; 
+} 
 
 header {
   background-color:rgb(64, 135, 228);
@@ -54,29 +54,43 @@ header .container {
 .main-container { 
   display: flex;
   columns: 2;
-  column-width: 3% 80%;
-  column-gap: 0.5%;
-  justify-content: space-around;
-  background-color: rgba(206, 202, 202, 0.685);
+  column-width: 20% 80%;
 }
 
 .main-container aside {
   font-size: 0.75rem;
   border: .3rem solid black;
   border-bottom: none;
-}
-
-.services-container {
-  display: flex;
-  justify-content: space-between;
+  float: left;
+  width: 20%;
   padding: 2rem;
-  background-color:rgb(64, 135, 228);
+  text-align: left;
 }
 
-.services-container .image-container {
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 0px 1.25rem;
+  background-color:white;
+  }
+
+.services .content {
+  padding: 2rem 0;
+}
+
+.services .image-container {
   width: 90%;
   height: 65%;
   margin: 0 auto;
+}
+
+.services .image-container img {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
 .footer {
