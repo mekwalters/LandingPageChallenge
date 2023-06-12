@@ -1,17 +1,43 @@
+
+
+/* Fonts //
+font-family: 'Black Ops One', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Space Mono', monospace;
+*/
+
 html {
   font-size: 16px;
+  font-family: 'Space Mono', monospace;
+  font-style: bold;
 }
 
 body{
   text-align: center;
+  background-image: url("/Images/blue\ watercolor\ background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: grey;
+  font-weight: bold;
+}
+
+a:active {
+  color: rgb(19, 107, 53);
 }
 
 h1 {
-  margin: auto;
+  margin: 0 auto;
   padding-top: 1rem;
+  text-align:center;
 }
 .image-container {
   overflow: hidden;
@@ -19,20 +45,39 @@ h1 {
 
 .image-container img {
   display:block;
-  max-width: 100%; 
+  width: 100%; 
+  height: auto;
+  margin: 0 auto;
+  border: .75rem solid black;
 } 
 
 header {
-  background-color:rgb(64, 135, 228);
-  border: 3px solid yellow;
-  max-height: 200px;
+  max-height: 12rem;
+  width: 100%;
+  border-bottom: 2rem double black;
+  background-image: url("/Images/pexels-david-underland-4026204.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 5;
+  position: fixed;
 }
 
+header h1 {
+  font-family: "Black Ops One", "Space Mono";
+  font-size: 2rem;
+}
+
+.mission h1 {
+  padding: 2rem;
+  font-size: 2rem;
+  font-family: 'Orbitron', sans-serif;
+}
 header .container {
   display: flex;
   flex-flow: column;
   position: fixed;
   margin-top: 0;
+  padding-top: 0;
   /*need background image */
   width: 100%;
 }
@@ -43,54 +88,60 @@ header .container {
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-   
-  }
+}
 
 .container li {
   list-style-type: none;
-  padding: 1rem
+  padding: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
 }
 
 .main-container { 
   display: flex;
   columns: 2;
   column-width: 20% 80%;
+  padding-bottom: 1rem;
+  padding-top: 5rem;
 }
 
 .main-container aside {
-  font-size: 0.75rem;
+  font-size: 1rem;
   border: .3rem solid black;
-  border-bottom: none;
   float: left;
   width: 20%;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: left;
 }
 
+
 .services {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 2rem;
-  margin: 0px 1.25rem;
-  background-color:white;
-  }
+ /* padding: 2rem; /removed to see if problem with last container */
+ /* margin: 0px 1.25rem; */
+}
 
 .services .content {
-  padding: 2rem 0;
+  /*padding: 1rem 0; /testing 3rd */
+  width: 100%;
+  margin: 0 auto;
 }
 
 .services .image-container {
-  width: 90%;
-  height: 65%;
+  max-width: 300px; /*300px;*/
+  height: auto;
   margin: 0 auto;
+  padding: 0 2rem; 
 }
 
 .services .image-container img {
   margin: 0 auto;
   width: 100%;
   height: auto;
+  border: .5rem solid black;
 }
 
 .footer {
@@ -99,14 +150,23 @@ header .container {
   flex-direction:column;
   justify-content:center;
   align-items:flex-start;
-  background-color:gray;
+  padding: 2rem; 
+  border: .25rem black solid; 
+  font-size: 1.5rem;
+  color:aliceblue;
 }
+
 
 /* For small-screen mobile phones */
 @media (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
     padding-top: 0;
+  }
+  
+  h2 {
+    font-size: 1rem;
+    padding: 0;
   }
   .logo {
     display:hidden;
@@ -115,12 +175,41 @@ header .container {
     margin: 0 0.3;
   }
 
+  .aside {
+    display:hidden;
+  }
+  .services {
+    flex-flow: column wrap;
+  }
 }
 
 /* For medium-screen mobile phones */
 @media (min-width: 481px) and (max-width: 767px) {
   /* Styles for medium-screen mobile phones */
+  h1 {
+    font-size: 1.5rem;
+    padding-top: 0;
+  }
+  
+  h2 {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .logo {
+    display:hidden;
+  }
+  .container li {
+    margin: 0 0.3;
+  }
+
+  .main-container .aside {
+    display:hidden;
+  }
+  .services {
+    flex-flow: column wrap;
+  }
 }
+
 
 /* For large-screen mobile phones */
 @media (min-width: 768px) and (max-width: 1023px) {
